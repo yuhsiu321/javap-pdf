@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhtw.swen2.tutorial.presentation.view.UpdateTourView">
+
+    <Text layoutX="274.0" layoutY="73.0" text="Tour name" />
+    <TextField fx:id="nameTextField" layoutX="219.0" layoutY="78.0" />
+    <Text layoutX="264.0" layoutY="125.0" text="Descriptions" />
+    <TextField fx:id="desTextField" layoutX="219.0" layoutY="128.0" />
+    <Text layoutX="285.0" layoutY="175.0" text="from" />
+    <TextField fx:id="fromTextField" layoutX="219.0" layoutY="178.0" />
+    <Text layoutX="293.0" layoutY="225.0" text="to" />
+    <TextField fx:id="toTextField" layoutX="219.0" layoutY="228.0" />
+    <Text layoutX="259.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="transport type" />
+    <ChoiceBox fx:id="transportType" layoutX="218.0" layoutY="296.0" prefWidth="150.0" value="choose type">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="walk" />
+                <String fx:value="drive" />
+                <String fx:value="transit" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+    <Button fx:id="updateButton" layoutX="274.0" layoutY="362.0" onAction="#updateButtonAction" text="update" />
+
+</AnchorPane>

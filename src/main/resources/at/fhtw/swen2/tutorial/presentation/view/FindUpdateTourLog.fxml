@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="at.fhtw.swen2.tutorial.presentation.view.FindUpdateTourLogView"
+            prefHeight="400.0" prefWidth="600.0">
+    <Text layoutX="250.0" layoutY="75.0" text="TourLog's comment" />
+    <TextField fx:id="commentTextField" layoutX="219.0" layoutY="78.0" />
+
+    <Button fx:id="findUpdateLogButton" layoutX="250.0" layoutY="362.0" onAction="#findUpdateLogButtonAction" text="Find TourLog" />
+
+</AnchorPane>

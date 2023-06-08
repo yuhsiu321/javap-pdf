@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="at.fhtw.swen2.tutorial.presentation.view.DeleteTourLogView"
+            prefHeight="400.0" prefWidth="600.0">
+    <Text layoutX="200.0" layoutY="75.0" text="TourLog's comment, or double click the TourLog" />
+    <TextField fx:id="nameTextField" layoutX="219.0" layoutY="78.0" />
+
+    <Button fx:id="deleteButton" layoutX="274.0" layoutY="362.0" onAction="#deleteButtonAction" text="delete" />
+</AnchorPane>
