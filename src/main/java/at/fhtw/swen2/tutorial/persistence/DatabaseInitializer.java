@@ -50,7 +50,7 @@ public class DatabaseInitializer implements InitializingBean {
         tourList.add(Tour.builder().id(5L).name("First").tourDescription("1").from("wien").to("salzburg").transportType("fastest").build());
         tourList.add(Tour.builder().id(7L).name("Second").tourDescription("2").from("Changhua").to("Taipei").transportType("fastest").build());
         tourList.add(Tour.builder().id(11L).name("Third").tourDescription("3").from("Rome").to("Paris").transportType("fastest").build());
-        tourList.add(Tour.builder().id(13L).name("Last").tourDescription("4").from("Chicago").to("New York").transportType("fastest")..build());
+        tourList.add(Tour.builder().id(13L).name("Last").tourDescription("4").from("Chicago").to("New York").transportType("fastest").build());
         return tourList;
     }
 }
