@@ -35,10 +35,10 @@ public class PdfGeneratorDemo {
         templateEngine.setTemplateResolver(templateResolver);
 
         Context context = new Context();
-        context.setVariable("header", "Personen");
-        context.setVariable("persons", DatabaseInitializer.getInitialDemoDataDtos());
+        context.setVariable("header", "Tours");
+        context.setVariable("tours", DatabaseInitializer.getInitialDemoDataDtos());
 
-        return templateEngine.process("thymeleaf/person_list", context);
+        return templateEngine.process("thymeleaf/tour_list", context);
     }
 
     private void generatePdfFromHtml(String html) throws Exception {
