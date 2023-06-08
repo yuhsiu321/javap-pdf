@@ -1,6 +1,9 @@
 package at.fhtw.swen2.tutorial.service;
 
 import at.fhtw.swen2.tutorial.persistence.DatabaseInitializer;
+import at.fhtw.swen2.tutorial.presentation.view.TourLogListView;
+import at.fhtw.swen2.tutorial.presentation.viewmodel.TourLogListViewModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templatemode.TemplateMode;
@@ -11,6 +14,8 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 public class PdfGeneratorDemo {
+    @Autowired
+    public TourLogListViewModel tourLogListViewModel;
 
     private String parseThymeleafTemplateHelloWorld() {
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
@@ -26,7 +31,7 @@ public class PdfGeneratorDemo {
         return templateEngine.process("thymeleaf/hello_world", context);
     }
 
-    private String parseThymeleafTemplatePersonList() {
+    private String parseThymeleafTemplateTourList() {
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
@@ -42,7 +47,7 @@ public class PdfGeneratorDemo {
     }
 
     private void generatePdfFromHtml(String html) throws Exception {
-        String outputFolder = "src/main/resources/thymeleaf/thymeleaf.pdf";
+        String outputFolder = "src/main/resources/thymeleaf/tour.pdf";
         OutputStream outputStream = new FileOutputStream(outputFolder);
         ITextRenderer renderer = new ITextRenderer();
         renderer.setDocumentFromString(html);
@@ -54,7 +59,7 @@ public class PdfGeneratorDemo {
 
     public void startDemo() throws Exception {
         //generatePdfFromHtml(parseThymeleafTemplateHelloWorld());
-        generatePdfFromHtml(parseThymeleafTemplatePersonList());
+        generatePdfFromHtml(parseThymeleafTemplateTourList());
     }
 
     public static void main(String[] args) throws Exception {

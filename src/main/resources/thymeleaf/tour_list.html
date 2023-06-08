@@ -8,6 +8,12 @@
     <tr>
         <th> ID </th>
         <th> Name </th>
+        <th>Tour_Description</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Transport_Type</th>
+        <th>Tour_Distance</th>
+        <th>Estimated_Time</th>
     </tr>
     </thead>
     <tbody>
@@ -15,8 +21,14 @@
         <td colspan="2"> No Books Available </td>
     </tr>
     <tr th:each="tour : ${tours}">
-        <td><span th:text="${tour.id}"> Id </span></td>
-        <td><span th:text="${tour.name}"> Name </span></td>
+        <th><span th:text="${tour.id}"></span></th>
+        <th><span th:text="${tour.name}"></span></th>
+        <th><span th:text="${tour.tourDescription}"></span></th>
+        <th><span th:text="${tour.from}"></span></th>
+        <th><span th:text="${tour.to}"></span></th>
+        <th><span th:text="${tour.transportType}"></span></th>
+        <th><span th:text="${tour.distance}"></span></th>
+        <th><span th:text="${tour.time}"></span></th>
     </tr>
     </tbody>
 </table>

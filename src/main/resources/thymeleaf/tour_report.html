@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Tour Report</title>
+</head>
+<body>
+<!-- Tour information -->
+<h1>Tour Report</h1>
+<p>Id: <span th:text="${tour.id}"></span></p>
+<p>Name: <span th:text="${tour.name}"></span></p>
+<p>TourDescription: <span th:text="${tour.tourDescription}"></span></p>
+<p>From: <span th:text="${tour.from}"></span></p>
+<p>To: <span th:text="${tour.to}"></span></p>
+<p>TransportType: <span th:text="${tour.transportType}"></span></p>
+<p>TourDistance: <span th:text="${tour.tourDistance}"></span></p>
+<p>EstimatedTime: <span th:text="${tour.estimatedTime}"></span></p>
+<p>RouteInformation: <span th:text="${tour.routeInformation}"></span></p>
+
+
+<!-- Tour logs -->
+<h2>Tour Logs:</h2>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Comment</th>
+    <th>Difficulty</th>
+    <th>TotalTime</th>
+    <th>Rating</th>
+
+  </tr>
+  <tr th:each="tourLog : ${tour.logs}">
+    <td th:text="${tourLog.time}"></td>
+    <td th:text="${tourLog.comment}"></td>
+    <td th:text="${tourLog.difficulty}"></td>
+    <td th:text="${tourLog.totalTime}"></td>
+    <td th:text="${tourLog.rating}"></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -33,10 +33,10 @@ public class DatabaseInitializer implements InitializingBean {
         Calendar obj = Calendar.getInstance();
 
         List<TourEntity> tourList = new ArrayList<>();
-        tourList.add(TourEntity.builder().id(5L).name("First").tourDescription("1").from("here").to("there").build());
-        tourList.add(TourEntity.builder().id(7L).name("Second").tourDescription("2").from("here").to("there").build());
-        tourList.add(TourEntity.builder().id(11L).name("Third").tourDescription("3").from("here").to("there").build());
-        tourList.add(TourEntity.builder().id(13L).name("Last").tourDescription("4").from("there").to("here").build());
+        tourList.add(TourEntity.builder().id(5L).name("First").tourDescription("1").from("wien").to("salzburg").transportType("fastest").build());
+        tourList.add(TourEntity.builder().id(7L).name("Second").tourDescription("2").from("Changhua").to("Taipei").transportType("fastest").build());
+        tourList.add(TourEntity.builder().id(11L).name("Third").tourDescription("3").from("Rome").to("Paris").transportType("fastest").build());
+        tourList.add(TourEntity.builder().id(13L).name("Last").tourDescription("4").from("Chicago").to("New York").transportType("fastest").build());
 
         tourRepository.saveAll(tourList);
 
@@ -47,10 +47,10 @@ public class DatabaseInitializer implements InitializingBean {
 
     public static List<Tour> getInitialDemoDataDtos() {
         List<Tour> tourList = new ArrayList<>();
-        tourList.add(Tour.builder().id(5L).name("First").tourDescription("1").from("here").to("there").build());
-        tourList.add(Tour.builder().id(7L).name("Second").tourDescription("2").from("here").to("there").build());
-        tourList.add(Tour.builder().id(11L).name("Third").tourDescription("3").from("here").to("there").build());
-        tourList.add(Tour.builder().id(13L).name("Last").tourDescription("4").from("there").to("here").build());
+        tourList.add(Tour.builder().id(5L).name("First").tourDescription("1").from("wien").to("salzburg").transportType("fastest").build());
+        tourList.add(Tour.builder().id(7L).name("Second").tourDescription("2").from("Changhua").to("Taipei").transportType("fastest").build());
+        tourList.add(Tour.builder().id(11L).name("Third").tourDescription("3").from("Rome").to("Paris").transportType("fastest").build());
+        tourList.add(Tour.builder().id(13L).name("Last").tourDescription("4").from("Chicago").to("New York").transportType("fastest")..build());
         return tourList;
     }
 }

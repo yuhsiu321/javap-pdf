@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Summarize Report</title>
+</head>
+<body>
+<!-- Summarized data for each tour -->
+<h1>Summarize Report</h1>
+<table>
+  <tr>
+    <th>Tour</th>
+    <th>Average Time</th>
+    <th>Average Distance</th>
+    <th>Average Rating</th>
+  </tr>
+  <tr th:each="summary : ${summaries}">
+    <td th:text="${summary.tourName}"></td>
+    <td th:text="${summary.averageTime}"></td>
+    <td th:text="${summary.averageDistance}"></td>
+    <td th:text="${summary.averageRating}"></td>
+  </tr>
+</table>
+</body>
+</html>
